@@ -1,15 +1,14 @@
 import 'dart:io';
 
-void main() async {
-  
+void main() async{
+  // creating file object
   File file = File('sample.csv');
-  file.readAsString().then((String contents){
+  // read file
+  // read file asynchoronously
+  file.readAsString().then((String contents) {
+    // print file
     print(contents);
   });
 
-String contents = await file.readAsString();
-
+  String contents = await file.readAsString();
 }
-
-
-
